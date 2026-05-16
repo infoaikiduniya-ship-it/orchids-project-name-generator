@@ -12,7 +12,10 @@ export default function DemoPopup({ isOpen, onClose }) {
   // Focus first field when popup opens
   useEffect(() => {
     if (isOpen) {
-      setTimeout(() => nameRef.current?.focus(), 80)
+      const isMobile = window.innerWidth < 768
+      if (!isMobile) {
+        setTimeout(() => nameRef.current?.focus(), 80)
+      }
       document.body.style.overflow = 'hidden'
     } else {
       document.body.style.overflow = ''

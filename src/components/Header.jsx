@@ -9,7 +9,7 @@ export default function Header({ onOpenDemo }) {
         <a href="#" aria-label="Unique French Home">
           <div className="flex items-center gap-3">
             {/* SVG Logo replication from provided logo */}
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <svg width="44" height="44" className="w-10 h-10 md:w-14 md:h-14" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               {/* Four circles + star arrangement */}
               <circle cx="14" cy="14" r="10" fill="#6ECFB5" />
               <circle cx="14" cy="38" r="10" fill="#6ECFB5" />
@@ -23,10 +23,10 @@ export default function Header({ onOpenDemo }) {
               <line x1="52" y1="4" x2="52" y2="52" stroke="#1A237E" strokeWidth="2.5" strokeLinecap="round" />
             </svg>
             <div className="leading-tight">
-              <div className="text-2xl font-black tracking-tight" style={{ color: '#1A237E', lineHeight: 1.1 }}>
+              <div className="text-xl md:text-2xl font-black tracking-tight" style={{ color: '#1A237E', lineHeight: 1.1 }}>
                 unique
               </div>
-              <div className="text-2xl font-black tracking-tight" style={{ color: '#1A237E', lineHeight: 1.1 }}>
+              <div className="text-xl md:text-2xl font-black tracking-tight" style={{ color: '#1A237E', lineHeight: 1.1 }}>
                 french
               </div>
               <div className="text-xs font-medium tracking-wide" style={{ color: '#1A237E', opacity: 0.6 }}>

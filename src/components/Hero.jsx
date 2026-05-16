@@ -111,7 +111,7 @@ export default function Hero({ onOpenDemo }) {
             </div>
 
             {/* ── Right: Classroom Photo ── */}
-            <div className="flex-1 w-full max-w-xl lg:max-w-none">
+            <div className="hidden lg:flex flex-1 w-full max-w-xl lg:max-w-none">
               <div
                 className="relative rounded-2xl overflow-hidden"
                 style={{
@@ -124,7 +124,7 @@ export default function Hero({ onOpenDemo }) {
                   alt="Unique French students and instructor at SAS Nagar Kharar batch"
                   className="w-full h-auto object-cover"
                   style={{ display: 'block', maxHeight: 380 }}
-                  loading="eager"
+                  loading="lazy"
                 />
                 {/* Photo caption overlay */}
                 <div

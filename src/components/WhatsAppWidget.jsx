@@ -10,7 +10,7 @@ export default function WhatsAppWidget() {
   }, [])
 
   const waLink =
-    'https://wa.me/919501026457?text=Hi%2C%20I%20want%20details%20for%20TEF%20Canada%20online%20classes.'
+    'https://wa.me/919501026457?text=Hi%2C%20I%20want%20details%20about%20TEF%20%26%20TCF%20Canada%20French%20coaching%20classes.'
 
   return (
     <>
