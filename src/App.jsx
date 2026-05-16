@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Services from './components/Services'
@@ -11,6 +11,13 @@ import DemoPopup from './components/DemoPopup'
 
 export default function App() {
   const [demoOpen, setDemoOpen] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDemoOpen(true)
+    }, 3000)
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
     <div className="min-h-screen" style={{ fontFamily: "'Inter', sans-serif" }}>

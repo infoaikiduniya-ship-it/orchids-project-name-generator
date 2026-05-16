@@ -1,3 +1,5 @@
+// GTM Custom Event: 'whatsapp_conversion' fires on form submit
+// Update GTM trigger to: Custom Event → event name: whatsapp_conversion
 import { useState, useEffect, useRef } from 'react'
 
 export default function DemoPopup({ isOpen, onClose }) {
@@ -31,11 +33,26 @@ export default function DemoPopup({ isOpen, onClose }) {
       setTimeout(() => setShake(false), 500)
       return
     }
+
+    // GTM Push
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push({
+      event: 'whatsapp_conversion',
+      event_category: 'Lead Generation',
+      event_label: 'Book Demo Submission',
+      user_name: name.trim(),
+      user_city: city.trim(),
+    })
+
     const encodedMsg = encodeURIComponent(
       `Hi Unique French, I want to book a Free Demo. My Name is ${name.trim()} from ${city.trim()}. Please share batch details.`
     )
-    window.open(`https://wa.me/919501026457?text=${encodedMsg}`, '_blank', 'noopener,noreferrer')
-    // Reset & close
+
+    setTimeout(() => {
+      window.open(`https://wa.me/919501026457?text=${encodedMsg}`, '_blank', 'noopener,noreferrer')
+    }, 300)
+
+    // Reset & close (kept outside setTimeout as per instructions)
     setName('')
     setCity('')
     onClose()
