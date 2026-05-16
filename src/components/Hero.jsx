@@ -111,7 +111,7 @@ export default function Hero({ onOpenDemo }) {
             </div>
 
             {/* ── Right: Classroom Photo ── */}
-            <div className="hidden lg:flex flex-1 w-full max-w-xl lg:max-w-none">
+            <div className="flex flex-1 w-full max-w-xl lg:max-w-none">
               <div
                 className="relative rounded-2xl overflow-hidden"
                 style={{
