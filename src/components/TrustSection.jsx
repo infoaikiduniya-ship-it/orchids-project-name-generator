@@ -19,7 +19,7 @@ const reviews = [
     name: 'Rahul Sharma',
     avatar: 'RS',
     avatarBg: '#6A1B9A',
-    text: 'Highly recommended for Canada PR aspirants. Unique French is simply the best institute in Punjab for TEF Canada preparation.',
+    text: 'Highly recommended for Canada PR aspirants. Unique French is simply the best for both TEF and TCF Canada preparation in Punjab.',
     date: 'April 2024',
   },
 ]

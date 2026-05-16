@@ -41,7 +41,7 @@ export default function Hero({ onOpenDemo }) {
               >
                 Achieve <span style={{ color: '#FFD54F' }}>CLB 7</span> in<br />
                 First Attempt.{' '}
-                <span style={{ color: '#6ECFB5' }}>Specialized TEF Canada<br className="hidden sm:block" /> French Coaching</span> for Students.
+                <span style={{ color: '#6ECFB5' }}>Specialized TEF & TCF Canada<br className="hidden sm:block" /> French Coaching</span> for Students.
               </h1>
 
               {/* Sub-headline */}

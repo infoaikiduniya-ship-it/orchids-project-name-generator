@@ -20,6 +20,23 @@ const services = [
   {
     icon: (
       <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" fill="#D32F2F" fillOpacity="0.15" stroke="#1A237E" strokeWidth="2"/>
+        <path d="M8 9l8 3-8 3V9z" stroke="#D32F2F" strokeWidth="2" strokeLinejoin="round"/>
+      </svg>
+    ),
+    title: 'TCF Canada Coaching',
+    tag: 'Work Permit & PR',
+    tagColor: '#00695C',
+    bullets: [
+      'Specialized TCF Canada preparation',
+      'CLB 5 & CLB 7 target training',
+      'Work permit extension focus',
+      'All 4 components covered',
+    ],
+  },
+  {
+    icon: (
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <circle cx="12" cy="12" r="9" stroke="#1A237E" strokeWidth="2" />
         <path d="M12 3C12 3 9 7 9 12s3 9 3 9" stroke="#D32F2F" strokeWidth="2" strokeLinecap="round" />
         <path d="M3 12h18" stroke="#1A237E" strokeWidth="2" strokeLinecap="round" />
@@ -71,7 +88,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((s) => (
             <div
               key={s.title}

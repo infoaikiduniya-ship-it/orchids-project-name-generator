@@ -59,7 +59,7 @@ const features = [
       </svg>
     ),
     heading: 'Comprehensive Study Material',
-    body: 'Curated notes, past papers, audio samples, and writing task templates specifically for TEF Canada.',
+    body: 'Curated notes, past papers, audio samples, and writing task templates for both TEF Canada and TCF Canada exams.',
   },
 ]
 
