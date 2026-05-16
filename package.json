@@ -1,0 +1,26 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://t:eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJvcmNoaWRzIiwic3ViIjoiQHBpZXJyZS9zdG9yYWdlIiwicmVwbyI6IjgzOWRhZjNiLWVlMjAtNDQ2YS1iNTYwLTc2YWQxMmM5NzBlOSIsInNjb3BlcyI6WyJnaXQ6cmVhZCIsImdpdDp3cml0ZSJdLCJpYXQiOjE3Nzg2OTkwMTUsImV4cCI6MTgwOTgwMzAxNX0.fFgYdMJcJ7Fb-kEYKp1-y_RXrtw9yNs_-RprJEciG-LaeQ-JWNq835d9IIa8UCYgJAv0MHP7gvVt0CNluEPtWQ@orchids.code.storage/839daf3b-ee20-446a-b560-76ad12c970e9.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.0",
+    "@vitejs/plugin-react": "^6.0.1",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "tailwindcss": "^4.3.0",
+    "vite": "^8.0.12"
+  }
+}
