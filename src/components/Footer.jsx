@@ -1,4 +1,4 @@
-export default function Footer() {
+export default function Footer({ onOpenDemo }) {
   return (
     <footer className="bg-white" style={{ borderTop: '3px solid #E8EAF6' }}>
       {/* Google Ads Verification Section */}
@@ -48,8 +48,16 @@ export default function Footer() {
           </address>
         </div>
 
-        {/* Phone & Hours */}
+        {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+          <button
+            onClick={onOpenDemo}
+            className="flex items-center gap-2 rounded-lg font-black px-8 py-3 text-white transition-opacity hover:opacity-90"
+            style={{ backgroundColor: '#1A237E', fontSize: '1.15rem' }}
+          >
+            Book Free Demo
+          </button>
+          
           <a
             href="tel:9501026457"
             className="flex items-center gap-2 rounded-lg font-black px-6 py-3 text-white transition-opacity hover:opacity-90"

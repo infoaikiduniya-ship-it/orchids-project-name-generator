@@ -1,4 +1,4 @@
-export default function Header() {
+export default function Header({ onOpenDemo }) {
   return (
     <header
       className="sticky top-0 z-50 bg-white shadow-md"
@@ -36,17 +36,29 @@ export default function Header() {
           </div>
         </a>
 
-        {/* Call Now Button */}
-        <a
-          href="tel:9501026457"
-          className="flex items-center gap-2 rounded-lg font-black text-white px-5 py-3 text-base md:text-lg transition-transform active:scale-95 hover:opacity-90"
-          style={{ backgroundColor: '#D32F2F', letterSpacing: '0.01em' }}
-          aria-label="Call Unique French now at 9501026457"
-        >
-          <PhoneIcon />
-          <span className="hidden sm:inline">Call Now: </span>
-          <span>9501026457</span>
-        </a>
+        {/* Buttons Group */}
+        <div className="flex items-center gap-3">
+          {/* Book Free Demo (Desktop) */}
+          <button
+            onClick={onOpenDemo}
+            className="hidden md:flex items-center gap-2 rounded-lg font-black text-white px-5 py-3 transition-transform active:scale-95 hover:opacity-90"
+            style={{ backgroundColor: '#1A237E' }}
+          >
+            Book Free Demo
+          </button>
+
+          {/* Call Now Button */}
+          <a
+            href="tel:9501026457"
+            className="flex items-center gap-2 rounded-lg font-black text-white px-5 py-3 text-base md:text-lg transition-transform active:scale-95 hover:opacity-90"
+            style={{ backgroundColor: '#D32F2F', letterSpacing: '0.01em' }}
+            aria-label="Call Unique French now at 9501026457"
+          >
+            <PhoneIcon />
+            <span className="hidden sm:inline">Call Now: </span>
+            <span>9501026457</span>
+          </a>
+        </div>
       </div>
     </header>
   )

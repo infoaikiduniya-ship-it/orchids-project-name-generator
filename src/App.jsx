@@ -21,7 +21,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen" style={{ fontFamily: "'Inter', sans-serif" }}>
-      <Header />
+      <Header onOpenDemo={() => setDemoOpen(true)} />
       <Hero onOpenDemo={() => setDemoOpen(true)} />
       <Services />
       <TrustSection />

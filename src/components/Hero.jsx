@@ -74,20 +74,36 @@ export default function Hero({ onOpenDemo }) {
                 ))}
               </ul>
 
-              {/* CTA */}
-              <a
-                href="tel:+919501026457"
-                className="inline-flex items-center gap-3 rounded-xl font-black text-white shadow-2xl px-8 py-5 transition-transform active:scale-95 hover:scale-105"
-                style={{
-                  backgroundColor: '#D32F2F',
-                  fontSize: 'clamp(1.05rem, 3.5vw, 1.3rem)',
-                  boxShadow: '0 8px 32px rgba(211,47,47,0.5)',
-                }}
-                aria-label="Tap to call Unique French at 9501026457"
-              >
-                <PhoneIcon />
-                Tap to Call: 9501026457
-              </a>
+              {/* CTA Group */}
+              <div className="flex flex-col sm:flex-row items-center gap-4">
+                <button
+                  onClick={onOpenDemo}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-xl font-black text-white px-8 py-5 transition-transform active:scale-95 hover:scale-105"
+                  style={{
+                    backgroundColor: '#FFD54F',
+                    color: '#1A237E',
+                    fontSize: 'clamp(1rem, 3.5vw, 1.25rem)',
+                    boxShadow: '0 8px 32px rgba(255,213,79,0.35)',
+                  }}
+                >
+                  <CalendarIcon />
+                  Book Free Demo
+                </button>
+
+                <a
+                  href="tel:+919501026457"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-xl font-black text-white px-8 py-5 transition-transform active:scale-95 hover:scale-105"
+                  style={{
+                    backgroundColor: '#D32F2F',
+                    fontSize: 'clamp(1rem, 3.5vw, 1.25rem)',
+                    boxShadow: '0 8px 32px rgba(211,47,47,0.5)',
+                  }}
+                  aria-label="Tap to call Unique French at 9501026457"
+                >
+                  <PhoneIcon />
+                  Tap to Call
+                </a>
+              </div>
 
               <p className="mt-4 text-xs font-semibold uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.45)', letterSpacing: '0.12em' }}>
                 TEF Canada · TCF Canada · CLB 7 &amp; CLB 5

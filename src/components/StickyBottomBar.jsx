@@ -1,10 +1,4 @@
-export default function StickyBottomBar() {
-  function scrollToDemo() {
-    // Scroll to footer which has the contact CTA, or to the about section
-    const target = document.getElementById('book-demo') || document.querySelector('footer')
-    if (target) target.scrollIntoView({ behavior: 'smooth' })
-  }
-
+export default function StickyBottomBar({ onOpenDemo }) {
   return (
     <div
       className="fixed bottom-0 left-0 right-0 md:hidden"
@@ -35,7 +29,7 @@ export default function StickyBottomBar() {
 
         {/* ── Book Free Demo ── */}
         <button
-          onClick={scrollToDemo}
+          onClick={onOpenDemo}
           className="flex-1 flex flex-col items-center justify-center gap-1 py-3 font-black text-white active:opacity-80 transition-opacity"
           style={{ background: 'linear-gradient(135deg, #C62828 0%, #D32F2F 100%)' }}
           aria-label="Book a free demo"
