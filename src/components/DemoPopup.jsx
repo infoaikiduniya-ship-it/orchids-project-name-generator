@@ -118,14 +118,14 @@ export default function DemoPopup({ isOpen, onClose }) {
             {/* WhatsApp chip */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-3 text-xs font-bold" style={{ backgroundColor: 'rgba(255,255,255,0.15)' }}>
               <WaIcon size={13} />
-              Connects via WhatsApp
+              Free · No obligation
             </div>
 
             <h2 id="popup-title" className="font-black text-xl leading-snug mb-1">
-              Book Your Free Demo
+              Claim Your Free Demo Session
             </h2>
             <p className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.75)' }}>
-              Fill in your details — we'll reach out instantly.
+              Takes 20 seconds · Expert calls you back
             </p>
           </div>
 
@@ -220,6 +220,14 @@ export default function DemoPopup({ isOpen, onClose }) {
               </div>
             )}
 
+            {/* Urgency */}
+            <div className="flex items-center justify-center gap-2 text-xs font-semibold" style={{ color: '#D32F2F' }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+              </svg>
+              Limited demo seats available this week
+            </div>
+
             {/* Submit */}
             <button
               type="submit"
@@ -231,11 +239,11 @@ export default function DemoPopup({ isOpen, onClose }) {
               }}
             >
               <WaIcon size={22} />
-              Submit &amp; Message on WhatsApp
+              Book My Free Demo →
             </button>
 
             <p className="text-center text-xs font-medium" style={{ color: '#aaa' }}>
-              Opens WhatsApp · No spam · 100% free
+              ✓ Free · ✓ No commitment · ✓ Get callback in minutes
             </p>
           </form>
         </div>
