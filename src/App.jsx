@@ -14,7 +14,7 @@ export default function App() {
 
   useEffect(() => {
     const isMobile = window.innerWidth < 768
-    const delay = isMobile ? 5000 : 3000
+    const delay = isMobile ? 8000 : 6000
     const timer = setTimeout(() => {
       setDemoOpen(true)
     }, delay)
