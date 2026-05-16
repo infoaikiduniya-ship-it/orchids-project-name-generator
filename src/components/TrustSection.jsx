@@ -1,4 +1,4 @@
-const GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/YOUR_LINK_HERE' // ← replace with your share link
+const GOOGLE_MAPS_URL = 'https://share.google/ISfME7VKpqqVeQYFs'
 
 const reviews = [
   {
