@@ -1,6 +1,18 @@
-import { Suspense } from 'react'
+import { Suspense, useState, useEffect } from 'react'
 
 export default function Hero({ onOpenDemo }) {
+  const slides = [
+    { src: '/gallery/batch3.webp', label: 'Online Batch — Live Classes' },
+    { src: '/gallery/batch2.webp', label: 'SAS Nagar Batch · Kharar' },
+  ]
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
   return (
     <Suspense fallback={
       <div className="min-h-screen flex items-center justify-center bg-[#0F1C3F]">
@@ -117,58 +129,46 @@ export default function Hero({ onOpenDemo }) {
                 </p>
               </div>
 
-              {/* ── Right: Classroom Photo ── */}
+              {/* ── Right: Auto-playing Slideshow ── */}
               <div className="flex flex-col flex-1 w-full max-w-xl lg:max-w-none">
-                {/* Image 1 */}
                 <div
-                  className="relative rounded-2xl overflow-hidden"
+                  className="relative rounded-2xl overflow-hidden w-full"
                   style={{
                     boxShadow: '0 16px 56px rgba(0,0,0,0.45)',
                     border: '3px solid rgba(110,207,181,0.45)',
+                    height: 380,
                   }}
                 >
-                  <img
-                    src="/classroom.jpg"
-                    alt="Unique French students and instructor at SAS Nagar Kharar batch"
-                    className="w-full h-auto object-cover"
-                    style={{ display: 'block', maxHeight: 380 }}
-                    width="600"
-                    height="400"
-                    loading="eager"
-                    decoding="async"
-                  />
-                  {/* Photo caption overlay */}
-                  <div
-                    className="absolute bottom-0 left-0 right-0 px-4 py-3"
-                    style={{
-                      background: 'linear-gradient(to top, rgba(26,35,126,0.9) 0%, transparent 100%)',
-                    }}
-                  >
-                    <p className="text-white text-sm font-bold">
-                      Our students — SAS Nagar batch, Kharar
-                    </p>
-                  </div>
-                </div>
-
-                {/* Image 2 */}
-                <div
-                  className="relative rounded-2xl overflow-hidden"
-                  style={{
-                    marginTop: '12px',
-                    boxShadow: '0 16px 56px rgba(0,0,0,0.45)',
-                    border: '3px solid rgba(110,207,181,0.45)',
-                  }}
-                >
-                  <img
-                    src="/gallery/batch2.webp"
-                    alt="Unique French students batch"
-                    className="w-full h-auto object-cover"
-                    style={{ display: 'block', maxHeight: 380 }}
-                    width="600"
-                    height="400"
-                    loading="lazy"
-                    decoding="async"
-                  />
+                  {slides.map((slide, idx) => (
+                    <div
+                      key={idx}
+                      className="absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out"
+                      style={{
+                        opacity: idx === currentSlide ? 1 : 0,
+                        pointerEvents: idx === currentSlide ? 'auto' : 'none',
+                      }}
+                    >
+                      <img
+                        src={slide.src}
+                        alt={slide.label}
+                        className="w-full h-full object-cover"
+                        style={{ display: 'block' }}
+                        loading={idx === 0 ? "eager" : "lazy"}
+                        decoding="async"
+                      />
+                      {/* Photo caption overlay */}
+                      <div
+                        className="absolute bottom-0 left-0 right-0 px-4 py-3"
+                        style={{
+                          background: 'linear-gradient(to top, rgba(26,35,126,0.9) 0%, transparent 100%)',
+                        }}
+                      >
+                        <p className="text-white text-sm font-bold">
+                          {slide.label}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
 
