@@ -74,7 +74,11 @@ export default function VideoTestimonials() {
                 className="relative w-full rounded-xl overflow-hidden cursor-pointer group"
                 style={{
                   paddingTop: '179.72%', // Matches portrait Wistia video aspect ratio perfectly
-                  background: 'center / cover no-repeat url("https://fast.wistia.com/embed/medias/q1tdy7o32x.jpg")',
+                  backgroundColor: '#1A237E',
+                  backgroundImage: 'url("https://fast.wistia.com/embed/medias/q1tdy7o32x/swatch")',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
                 }}
               >
                 {/* Visual Glassmorphic Overlay */}
