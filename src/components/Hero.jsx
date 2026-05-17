@@ -2,8 +2,8 @@ import { Suspense, useState, useEffect } from 'react'
 
 export default function Hero({ onOpenDemo }) {
   const slides = [
-    { src: '/gallery/batch3.webp', label: 'Online Batch — Live Classes' },
-    { src: '/gallery/batch2.webp', label: 'SAS Nagar Batch · Kharar' },
+    { src: '/gallery/batch1.webp', label: 'Online Batch 1 - Live Classes' },
+    { src: '/gallery/batch2.webp', label: 'Online Batch 2 - Live Classes' },
   ]
   const [currentSlide, setCurrentSlide] = useState(0)
 
