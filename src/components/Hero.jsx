@@ -156,10 +156,10 @@ export default function Hero({ onOpenDemo }) {
                           display: 'block',
                           background: '#1A237E',
                           width: '100%',
-                          height: 'auto',
+                          height: '100%',
                           objectFit: 'contain',
                         }}
-                        loading={idx === 0 ? "eager" : "lazy"}
+                        loading="eager"
                         decoding="async"
                       />
                       {/* Photo caption overlay */}
