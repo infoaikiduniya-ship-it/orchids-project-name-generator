@@ -13,7 +13,7 @@ export default function Hero({ onOpenDemo }) {
         {/* ── HERO ── */}
         <section
           className="relative overflow-hidden"
-          style={{ background: 'linear-gradient(135deg, #1A237E 0%, #283593 60%, #1A237E 100%)' }}
+          style={{ background: 'linear-gradient(135deg, #1A237E 0%, #283593 60%, #1A237E 100%)', minHeight: '100vh', contain: 'layout' }}
         >
           <div
             className="absolute inset-0 pointer-events-none"
@@ -133,7 +133,7 @@ export default function Hero({ onOpenDemo }) {
                     style={{ display: 'block', maxHeight: 380 }}
                     width="600"
                     height="400"
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
                   />
                   {/* Photo caption overlay */}
