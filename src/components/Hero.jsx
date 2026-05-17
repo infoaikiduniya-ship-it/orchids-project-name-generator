@@ -99,12 +99,17 @@ export default function Hero({ onOpenDemo }) {
                     Book Free Demo
                   </button>
 
-                  <a 
-                    href="tel:+919501026457"
-                    className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-xl transition-all"
-                  >
-                    📞 Call Now — 9501026457
-                  </a>
+                  <div className="flex flex-col items-center sm:items-start gap-1">
+                    <a 
+                      href="tel:+919501026457"
+                      className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-xl transition-all"
+                    >
+                      📞 Call Now — 9501026457
+                    </a>
+                    <span className="text-xs text-white/85 font-medium sm:pl-2">
+                      Available Mon-Sat, 9AM-7PM
+                    </span>
+                  </div>
                 </div>
 
                 <p className="mt-4 text-xs font-semibold uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.45)', letterSpacing: '0.12em' }}>
