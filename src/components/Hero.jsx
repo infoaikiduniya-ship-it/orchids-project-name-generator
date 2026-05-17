@@ -132,11 +132,11 @@ export default function Hero({ onOpenDemo }) {
               {/* ── Right: Auto-playing Slideshow ── */}
               <div className="flex flex-col flex-1 w-full max-w-xl lg:max-w-none">
                 <div
-                  className="relative rounded-2xl overflow-hidden w-full"
+                  className="relative rounded-2xl overflow-hidden w-full aspect-[1.58] lg:h-[380px] lg:aspect-none"
                   style={{
                     boxShadow: '0 16px 56px rgba(0,0,0,0.45)',
                     border: '3px solid rgba(110,207,181,0.45)',
-                    height: 380,
+                    background: '#1A237E',
                   }}
                 >
                   {slides.map((slide, idx) => (
@@ -146,13 +146,19 @@ export default function Hero({ onOpenDemo }) {
                       style={{
                         opacity: idx === currentSlide ? 1 : 0,
                         pointerEvents: idx === currentSlide ? 'auto' : 'none',
+                        background: '#1A237E',
                       }}
                     >
                       <img
                         src={slide.src}
                         alt={slide.label}
-                        className="w-full h-full object-cover"
-                        style={{ display: 'block' }}
+                        style={{
+                          display: 'block',
+                          background: '#1A237E',
+                          width: '100%',
+                          height: 'auto',
+                          objectFit: 'contain',
+                        }}
                         loading={idx === 0 ? "eager" : "lazy"}
                         decoding="async"
                       />
