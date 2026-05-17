@@ -1,20 +1,22 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, lazy, Suspense } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
-import Services from './components/Services'
-import TrustSection from './components/TrustSection'
-import WhyChooseUs from './components/WhyChooseUs'
 import Footer from './components/Footer'
 import StickyBottomBar from './components/StickyBottomBar'
 import WhatsAppWidget from './components/WhatsAppWidget'
 import DemoPopup from './components/DemoPopup'
+
+const VideoTestimonials = lazy(() => import('./components/VideoTestimonials'))
+const Services = lazy(() => import('./components/Services'))
+const WhyChooseUs = lazy(() => import('./components/WhyChooseUs'))
+const TrustSection = lazy(() => import('./components/TrustSection'))
 
 export default function App() {
   const [demoOpen, setDemoOpen] = useState(false)
 
   useEffect(() => {
     const isMobile = window.innerWidth < 768
-    const delay = isMobile ? 8000 : 6000
+    const delay = isMobile ? 10000 : 8000
     const timer = setTimeout(() => {
       setDemoOpen(true)
     }, delay)
@@ -25,9 +27,22 @@ export default function App() {
     <div className="min-h-screen" style={{ fontFamily: "'Inter', sans-serif" }}>
       <Header onOpenDemo={() => setDemoOpen(true)} />
       <Hero onOpenDemo={() => setDemoOpen(true)} />
-      <Services />
-      <TrustSection />
-      <WhyChooseUs />
+
+      <Suspense fallback={<div className="py-8" />}>
+        <Services />
+      </Suspense>
+
+      <Suspense fallback={<div className="py-8" />}>
+        <TrustSection />
+      </Suspense>
+
+      <Suspense fallback={<div className="py-8" />}>
+        <WhyChooseUs />
+      </Suspense>
+
+      <Suspense fallback={<div className="py-8" />}>
+        <VideoTestimonials />
+      </Suspense>
 
       <span id="book-demo" aria-hidden="true" />
 
