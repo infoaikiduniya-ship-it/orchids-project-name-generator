@@ -34,19 +34,19 @@ export default function App() {
       </Suspense>
 
       <Suspense fallback={<div className="py-8" />}>
-        <TrustSection />
-      </Suspense>
-
-      <Suspense fallback={<div className="py-8" />}>
         <StudentResults />
       </Suspense>
 
       <Suspense fallback={<div className="py-8" />}>
-        <WhyChooseUs />
+        <VideoTestimonials />
       </Suspense>
 
       <Suspense fallback={<div className="py-8" />}>
-        <VideoTestimonials />
+        <TrustSection />
+      </Suspense>
+
+      <Suspense fallback={<div className="py-8" />}>
+        <WhyChooseUs />
       </Suspense>
 
       <span id="book-demo" aria-hidden="true" />
