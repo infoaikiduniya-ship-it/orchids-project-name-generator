@@ -90,18 +90,11 @@ export default function Hero({ onOpenDemo }) {
                   Book Free Demo
                 </button>
 
-                <a
+                <a 
                   href="tel:+919501026457"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-xl font-black text-white px-8 py-5 transition-transform active:scale-95 hover:scale-105"
-                  style={{
-                    backgroundColor: '#D32F2F',
-                    fontSize: 'clamp(1rem, 3.5vw, 1.25rem)',
-                    boxShadow: '0 8px 32px rgba(211,47,47,0.5)',
-                  }}
-                  aria-label="Tap to call Unique French at 9501026457"
+                  className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-xl transition-all"
                 >
-                  <PhoneIcon />
-                  Tap to Call
+                  📞 Call Now — 9501026457
                 </a>
               </div>
 
