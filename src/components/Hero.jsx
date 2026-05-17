@@ -118,7 +118,8 @@ export default function Hero({ onOpenDemo }) {
               </div>
 
               {/* ── Right: Classroom Photo ── */}
-              <div className="flex flex-1 w-full max-w-xl lg:max-w-none">
+              <div className="flex flex-col flex-1 w-full max-w-xl lg:max-w-none">
+                {/* Image 1 */}
                 <div
                   className="relative rounded-2xl overflow-hidden"
                   style={{
@@ -147,6 +148,27 @@ export default function Hero({ onOpenDemo }) {
                       Our students — SAS Nagar batch, Kharar
                     </p>
                   </div>
+                </div>
+
+                {/* Image 2 */}
+                <div
+                  className="relative rounded-2xl overflow-hidden"
+                  style={{
+                    marginTop: '12px',
+                    boxShadow: '0 16px 56px rgba(0,0,0,0.45)',
+                    border: '3px solid rgba(110,207,181,0.45)',
+                  }}
+                >
+                  <img
+                    src="/gallery/batch2.webp"
+                    alt="Unique French students batch"
+                    className="w-full h-auto object-cover"
+                    style={{ display: 'block', maxHeight: 380 }}
+                    width="600"
+                    height="400"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
               </div>
 

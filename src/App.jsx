@@ -10,6 +10,7 @@ const VideoTestimonials = lazy(() => import('./components/VideoTestimonials'))
 const Services = lazy(() => import('./components/Services'))
 const WhyChooseUs = lazy(() => import('./components/WhyChooseUs'))
 const TrustSection = lazy(() => import('./components/TrustSection'))
+const StudentResults = lazy(() => import('./components/StudentResults'))
 
 export default function App() {
   const [demoOpen, setDemoOpen] = useState(false)
@@ -34,6 +35,10 @@ export default function App() {
 
       <Suspense fallback={<div className="py-8" />}>
         <TrustSection />
+      </Suspense>
+
+      <Suspense fallback={<div className="py-8" />}>
+        <StudentResults />
       </Suspense>
 
       <Suspense fallback={<div className="py-8" />}>
