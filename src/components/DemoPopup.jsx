@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from 'react'
 
 export default function DemoPopup({ isOpen, onClose }) {
   const [name, setName] = useState('')
-  const [city, setCity] = useState('')
   const [phone, setPhone] = useState('')
   const [shake, setShake] = useState(false)
   const nameRef = useRef(null)
@@ -32,7 +31,7 @@ export default function DemoPopup({ isOpen, onClose }) {
 
   function handleSubmit(e) {
     e.preventDefault()
-    if (!name.trim() || !city.trim() || !phone.trim()) {
+    if (!name.trim() || !phone.trim()) {
       setShake(true)
       setTimeout(() => setShake(false), 500)
       return
@@ -45,12 +44,11 @@ export default function DemoPopup({ isOpen, onClose }) {
       event_category: 'Lead Generation',
       event_label: 'Book Demo Submission',
       user_name: name.trim(),
-      user_city: city.trim(),
       user_phone: phone.trim(),
     })
 
     const encodedMsg = encodeURIComponent(
-      `Hi Unique French, I want to book a Free Demo. My Name is ${name.trim()} from ${city.trim()}. My WhatsApp number is ${phone.trim()}. Please share batch details.`
+      `Hi Unique French, I want to book a Free Demo. My Name is ${name.trim()}. My WhatsApp number is ${phone.trim()}. Please share batch details.`
     )
 
     setTimeout(() => {
@@ -59,7 +57,6 @@ export default function DemoPopup({ isOpen, onClose }) {
 
     // Reset & close (kept outside setTimeout as per instructions)
     setName('')
-    setCity('')
     setPhone('')
     onClose()
   }
@@ -156,29 +153,7 @@ export default function DemoPopup({ isOpen, onClose }) {
               />
             </div>
 
-            {/* City */}
-            <div className="flex flex-col gap-1.5">
-              <label htmlFor="demo-city" className="text-sm font-bold" style={{ color: '#1A237E' }}>
-                Your City <span style={{ color: '#D32F2F' }}>*</span>
-              </label>
-              <input
-                id="demo-city"
-                type="text"
-                value={city}
-                onChange={(e) => setCity(e.target.value)}
-                placeholder="e.g. Chandigarh"
-                className="w-full rounded-xl px-4 py-3 text-sm font-semibold outline-none transition-all"
-                style={{
-                  border: '2px solid #E0E0E0',
-                  color: '#1A237E',
-                  backgroundColor: '#F8F9FF',
-                }}
-                onFocus={(e) => (e.target.style.borderColor = '#1A237E')}
-                onBlur={(e) => (e.target.style.borderColor = '#E0E0E0')}
-                autoComplete="address-level2"
-                required
-              />
-            </div>
+
 
             {/* Phone */}
             <div className="flex flex-col gap-1.5">
@@ -207,15 +182,14 @@ export default function DemoPopup({ isOpen, onClose }) {
             </div>
 
             {/* Preview of message */}
-            {(name.trim() || city.trim() || phone.trim()) && (
+            {(name.trim() || phone.trim()) && (
               <div
                 className="rounded-xl px-4 py-3 text-xs font-medium leading-relaxed"
                 style={{ backgroundColor: '#F1F8F4', border: '1.5px solid #C8E6C9', color: '#2E7D32' }}
               >
                 <span className="font-bold">Message preview: </span>
                 "Hi Unique French, I want to book a Free Demo. My Name is{' '}
-                <strong>{name.trim() || '[Name]'}</strong> from{' '}
-                <strong>{city.trim() || '[City]'}</strong>. My WhatsApp number is{' '}
+                <strong>{name.trim() || '[Name]'}</strong>. My WhatsApp number is{' '}
                 <strong>{phone.trim() || '[Phone]'}</strong>. Please share batch details."
               </div>
             )}
