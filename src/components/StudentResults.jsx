@@ -65,11 +65,11 @@ export default function StudentResults() {
               }}
             >
               {/* Image Header */}
-              <div className="relative w-full h-[220px] overflow-hidden bg-gray-100">
+              <div className="relative w-full overflow-hidden bg-white border-b" style={{ borderColor: '#EDF2F7' }}>
                 <img
                   src={card.image}
                   alt={`TCF Canada certificate for ${card.name}`}
-                  className="w-full h-full object-cover"
+                  style={{ background: 'white', display: 'block', width: '100%', height: 'auto', objectFit: 'contain' }}
                   loading="lazy"
                 />
                 {card.badge && (
