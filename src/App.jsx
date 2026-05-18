@@ -18,10 +18,10 @@ export default function App() {
   useEffect(() => {
     const isMobile = window.innerWidth < 768
     const delay = isMobile ? 10000 : 8000
-    const timer = setTimeout(() => {
-      setDemoOpen(true)
-    }, delay)
-    return () => clearTimeout(timer)
+    // const timer = setTimeout(() => {
+    //   setDemoOpen(true)
+    // }, delay)
+    // return () => clearTimeout(timer)
   }, [])
 
   return (
