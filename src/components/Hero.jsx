@@ -65,12 +65,16 @@ export default function Hero({ onOpenDemo }) {
                   <span style={{ color: '#6ECFB5' }}>Specialized TEF & TCF Canada<br className="hidden sm:block" /> French Coaching</span> for Students.
                 </h1>
 
+                <p className="text-yellow-300 font-bold text-sm mb-4">
+                  ✓ Boost your CRS score by up to 54 points with CLB 7 French
+                </p>
+
                 {/* Sub-headline */}
                 <p
                   className="text-white font-semibold mb-7"
                   style={{ fontSize: 'clamp(0.95rem, 2.4vw, 1.15rem)', opacity: 0.9, lineHeight: 1.65, maxWidth: 500 }}
                 >
-                  Online batches starting soon. Speak directly to our expert trainers today.
+                  Join our 3-month intensive TEF & TCF Canada batch. Expert trainers · Flexible timings · CLB 7 guaranteed.
                 </p>
 
                 {/* Trust badges */}

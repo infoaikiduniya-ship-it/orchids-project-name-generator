@@ -15,6 +15,8 @@ const services = [
       'Comprehensive exam preparation',
       'Mock tests & timed practice',
       'All 4 components: speaking, writing, reading, listening',
+      '3-month intensive program',
+      'Batch starts every month',
     ],
   },
   {

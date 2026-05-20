@@ -121,6 +121,16 @@ export default function TrustSection() {
           ))}
         </div>
 
+        <div className="text-center mt-8 p-4 rounded-xl"
+        style={{ background: '#FFF3E0', border: '2px solid #FF6F00' }}>
+          <p className="font-bold text-orange-800">
+            🔥 Next batch starting June 1st — Only 8 seats left!
+          </p>
+          <p className="text-sm text-orange-700 mt-1">
+            Call now to reserve your seat: 9501026457
+          </p>
+        </div>
+
         {/* ── Verified Badge ── */}
         <div
           className="flex flex-col sm:flex-row items-center justify-center gap-4 rounded-2xl px-6 py-5 mb-8 mx-auto max-w-xl"

@@ -8,7 +8,7 @@ const features = [
       </svg>
     ),
     heading: 'Experienced & Certified Tutors',
-    body: 'Our instructors are certified French language experts with deep knowledge of TEF Canada and TCF exam formats.',
+    body: 'Our lead trainer is a certified French language expert with 8+ years experience in TEF TCF Canada preparation. 500+ students trained.',
   },
   {
     icon: (
